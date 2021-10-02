@@ -16,12 +16,16 @@
   
   <ul id="memberlist" class="fancylist">
     <li> Xing Liu </li>
-    <li> Xing Liu </li>
-    <li> Xing Liu </li>
-    <li> Xing Liu </li>
-    <li> Xing Liu </li>
-    <li> Xing Liu </li>
-    <li> Xing Liu </li>
+    <li> Charles Pei </li>
+    <li> Jennifer Wong </li>
+    <li> Faith Hockens </li>
+    <li> Andrew Habata </li>
+    <li> Ella Tang </li>
+    <li> Kevin Tan </li>
+    <li> John Bee </li>
+    <li> Shin Umeda </li>
+    
+      
   </ul>
   
 </body>
