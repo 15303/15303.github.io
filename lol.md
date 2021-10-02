@@ -11,7 +11,7 @@
     }
   </style>
 <body>
-  <h3> Members </h3>
+  <h2> Members </h2>
   
   
   <ul id="memberlist" class="fancylist">
