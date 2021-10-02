@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang='en-us'>
+  <head>
+    <title>Space Rocks | FTC 15303</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='cache-control' content='public,max-age=31536000' />
+    <meta name='description' content='A robotics team based in southern California. Part of MajorStem.org and sponsored by Collins Aerospace.'>
+    <meta name='keywords' content='15303,space rocks,15303 space rocks,FIRST,FTC,robotics'>
+    <meta name='viewpoint' content='width=device-width, initial-scale=1'>
+    <link rel='shortcut icon' href='fav.png'>
+    <style>
+@font-face{
+  font-family:'hyperspace';
+  font-weight:300;
+  src: url('fonts/hyperspace/regular.otf');
+  font-display:swap;
+}
+@font-face{
+  font-family:'raleway';
+  font-weight:400;
+  src: url('fonts/raleway/regular.woff2') format('woff2'),url('fonts/raleway/regular.woff') format('woff');
+  font-display:swap;
+}
+@font-face{
+  font-family:'raleway';
+  font-weight:300;
+  src: url('fonts/raleway/light.woff2') format('woff2'),url('fonts/raleway/light.woff') format('woff');
+  font-display:fallback;
+}
+html,body{
+  margin:0 1rem;
+}
+body{
+  background:#000;
+  cursor:url(cursor/white/up-blank.svg),auto;
+  overflow-y:scroll;
+  color:#fff;
+  font-family:raleway,sans-serif;
+  letter-spacing:.1rem;
+  font-weight:400;
+  font-size:2rem;
+}
+body.day{
+  background:#ddd;
+  color:#444;
+  cursor:url(cursor/gray/up-blank.svg),auto;
+}
+a[href^='#']{
+  text-decoration:none;
+  cursor:url(cursor/white/right-blank.svg) 128 0,pointer;
+}
+.day a[href^='#']{
+  cursor:url(cursor/gray/right-blank.svg) 128 0,pointer;
+}
+a{
+  color:inherit;
+  text-decoration:underline;
+  cursor:url(cursor/white/out.svg) 128 0,pointer;
+}
+.day a{
+  cursor:url(cursor/gray/out.svg) 128 0,pointer;
+}
+h1::first-letter{
+  font-family:hyperspace,raleway,sans-serif;
+  font-size:5.5rem;
+  margin-right:-.4rem;
+}
+h1{
+  font-weight:300;
+  font-size:3rem;
+}
+p{
+  box-sizing:border-box;
+  padding:0 1rem;
+}
+::selection{
+  background:#fff;
+}
+#content-wrapper{
+  margin:0 calc(40vw - 40vmin);
+  box-sizing:border-box;
+  padding-top:100vh;
+}
+#logo-wrapper{
+  position:absolute;
+  top:calc(50vh - 45vmin);
+  left:calc(50% - 50vmin);
+  width:100vmin;
+  height:100vmin;
+  clip-path:polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+}
+.day #logo-wrapper{
+  stroke:#444;
+}
+#down,#wire{
+  pointer-events:all;
+}
+#wire{
+  cursor:url(cursor/white/up.svg),pointer;
+}
+.day #wire{
+  cursor:url(cursor/gray/up.svg),pointer;
+}
+#down{
+  cursor:url(cursor/white/down.svg) 128 128,pointer;
+}
+.day #down{
+  cursor:url(cursor/gray/down.svg) 128 128,pointer;
+}
+#logo-wrapper{
+  stroke-width:.4rem;
+}
+#arcade{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+}
+#cursor{
+  position:absolute;
+  left:0;
+  top:0;
+  width:32px;
+  height:32px;
+  transform-origin:44.415px 74px;
+}
+#asteroids{
+  left:0;
+  top:0;
+  width:100vmax;
+  height:100vmax;
+  display:none;
+}
+.hitAsteroid{
+  animation:.1s hitAsteroid forwards;
+}
+#up{
+  left:0;
+  position:fixed;
+  width:calc(10vw - 10vmin);
+  height:100vh;
+  cursor:url(cursor/white/up.svg),auto;
+}
+.day #up{
+  cursor:url(cursor/gray/up.svg),pointer;
+}
+@keyframes hitAsteroid{
+  0%{fill:#fff}
+  99%{opacity:0;fill:#fff}
+  100%{opacity:0}
+}
+    </style>
+  </head>
+  <body>
+    <div id='up' onclick='window.scrollTo({top:0,behavior:`smooth`})'></div>
+    <div id='content-wrapper'>
+      <svg aria-hidden='true' id='logo-wrapper' viewBox='0 100 1800 1900' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='#fff' aria-label='15303 Space Rocks'>
+        <g id='wire' ondblclick='window.open(`/kessler`)' onmouseover='wire.speed=10,down.speed=.5' onmouseout='wire.speed=1,down.speed=1'>
+          <path id='wirex' d='
+          M900 500l500 500l-500 500l-500 -500z
+          '/>
+          <path id='wire0' d='
+          M900 500l500 500l-500 500l-500 -500z
+          '/>
+          <path id='wire1' d='
+          M400 1000l600 -100l400 100l-600 100z
+          '/>
+          <path id='wire2' d='
+          M900 500l100 400l-100 600l-100 -400z
+          '/>
+        </g>
+        <path id='logo' d='
+    M682.5 667.5l-150 -150v50v-50z
+    M707.5 642.5l100 -100l-50 -100l-125 125l-75 -75l150 -150
+    M832.5 517.5l50 -50v-150l-100 100l100 -100v-150l-150 150
+    M917.5 467.5l82.5 82.5l100 -200l-182.5 -182.5z
+    M1025 575l100 100l75 -75l-125 -125l125 125l75 -75l-150 -150
+    
+    M450 1100l-75 -75l-75 75l75 75l-75 75l-75 -75
+    M475 1125l-150 150l150 -150l75 75l-75 75l-75 -75
+    M632.5 1267.5h-100l-107.5 107.5l77.5 -75l100 100l-75 75l107.5 -107.5v-100
+    M775 1425l-75 -75l-150 150l75 75
+    M875 1525l-75 -75l-75 75l50 50l-50 -50l-75 75l75 75
+    
+    M925 1525l150 150l-150 -150l75 -75l75 75l-75 75h150
+    M1125 1325l-100 100l150 150l100 -100z
+    M1225 1225l-75 75l150 150l75 -75
+    M1250 1200l150 150l-75 -75h150h-150v-150
+    M1425 1025l-75 75l75 75l75 -75l75 75l-75 75
+        '/>
+        <g id='down' href='#about' onmouseover='down.speed=5,wire.speed=.5' onmouseout='down.speed=1,wire.speed=1'>
+          <path id='down0' d='
+          M800 1700L900 1750L1000 1700
+          '/>
+          <path id='down1' d='
+          M800 1700L900 1800L1000 1700
+          '/>
+          <path id='down2' d='
+          M800 1700L900 1850L1000 1700
+          '/>
+        </g>
+      </svg>
+
+      <a href='#about'><h1 id='about'>We are a youth robotics team based in Southern California.</h1></a>
+      <p>Created in August 2018 as part of MajorStem.org, our team consists of a group of students who are not only passionate towards science, but also eager to develop skills in communication, collaboration, teamwork, and leadership.</p>
+      <p>Every year we participate in the FIRST Tech Challenge, a nationwide robotics challenge where teams of middle and high school students compete to design, build, and program machines that score points in the challenge's game.</p>
+
+      <a href='#robot'><h1 id='robot'>Our FTC robot is built using the REV Robotics Kit and parts we made in-house.</h1></a>
+      <p>Through the combination of 3D printing and cutting, we are able to rapidly build and prototype innovative designs for our robot.</p>
+      <p>For our mecanum wheel drivetrain, we rely on REV motors, controllers and extrusions.</p>
+      <p>At the heart of our robot is a collect-store-shoot mechanism angled for getting rings consistently into the middle and upper goals.</p>
+      <p>Our code is hosted <a href='https://github.com/15303/UltimateGoal'>here</a> on GitHub.</p>
+
+      <a href='#social'><h1 id='social'>We post regular updates on our blog.</h1></a>
+      <p>Check it out <a href='https://majorstem.org'>here</a>.</p>
+
+    </div>
+    <script>
+const doc = document,
+      ref = doc.referrer,
+      contentWrapper = doc.getElementById('content-wrapper'),
+      logoWrapper = doc.getElementById('logo-wrapper'),
+      wire = [doc.getElementById('wire0'),doc.getElementById('wire1'),doc.getElementById('wire2')],
+      down = [doc.getElementById('down0'),doc.getElementById('down1'),doc.getElementById('down2')],
+      bulletWrapper = doc.getElementById('bullet-wrapper'),
+      cursor = doc.getElementById('cursor'),
+      flame = doc.getElementById('flame'),
+      asteroids = doc.getElementById('asteroids');
+splashAnim();
+
+doc.querySelectorAll(`*[href^='#']`).forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.blur();
+    doc.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+    window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
+  });
+});
+
+doc.onscroll = function(){
+  if(window.scrollY<50){
+    window.history.pushState({},'Space Rocks | FTC 15303',' ');
+  }
+  doc.querySelectorAll(`a[href^='#']`).forEach(anchor => {
+    if(Math.abs(anchor.getBoundingClientRect().top)<50){
+      window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
+    }
+  });
+};
+
+let time = new Date();
+time = time.getHours();
+if(time>=6&&time<18){
+  doc.body.classList.add('day');
+}
+wire.tick = 0;
+wire.time = Date.now();
+wire.speed = 1;
+
+down.tick = 0;
+down.time = wire.time;
+down.speed = 1;
+        
+function splashAnim(){
+  wire.tick += (Date.now() - wire.time)/8000*wire.speed;
+  wire.time = Date.now();
+  wire.center = [900,1000];
+
+  down.tick += (Date.now() - down.time)/1000*down.speed;
+  down.time = Date.now();
+  down.center = [900,1800];
+  wire.deviY = Math.sin(wire.tick/4-50)*100;
+  wire[0].setAttribute('d',
+  'M900 550'+
+  'L'+(Math.cos(wire.tick)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
+  'L900 1450'+
+  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  wire[1].setAttribute('d',
+  'M'+(Math.cos(wire.tick)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  wire[2].setAttribute('d',
+  'M900 550'+
+  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
+  'L900 1450'+
+  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  down[0].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick)*10+down.center[0])+
+  ' '+(Math.sin(down.tick)*50+down.center[1])+
+  'L1050 1700'
+  );
+  down[1].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick+2*Math.PI/3)*10+down.center[0])+
+  ' '+(Math.sin(down.tick+2*Math.PI/3)*50+down.center[1])+
+  'L1050 1700'
+  );
+  down[2].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick+4*Math.PI/3)*10+down.center[0])+
+  ' '+(Math.sin(down.tick+4*Math.PI/3)*50+down.center[1])+
+  'L1050 1700'
+  );
+  window.requestAnimationFrame(splashAnim);
+}
+    </script>
+  </body>
+</html>
