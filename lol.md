@@ -7,14 +7,16 @@
 <body>
   <h3> Members </h3>
   
-  <ul> * Xing Lui </ul>
-  <ul>* Charles Pei</ul>
-  <ul>* Andrew Habata</ul>
-  <ul>Jennifer Wong</ul>
-  <ul>Faith Hockens</ul>
-  <ul>Ella Tang</ul>
-  <ul>Kevin Tan</ul>
-  <ul>John Bee</ul>
+  
+  <ul>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+    <li> Xing Liu </li>
+  </ul>
   
 </body>
 </html>
