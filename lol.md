@@ -9,12 +9,12 @@
 <body>
   <h3> Members </h3>
   
-  * Xing Liu
-  * Charles Pei
-  * Andrew Habata
-  * Jennifer WOng
-  * Ella
-  * Faith Hockens
-
+  <ul>Xing</ul>
+  <ul>Charles Pei</ul>
+  <ul>Andrew Habata</ul>
+  <ul>Jennifer Wong</ul>
+  <ul>Faith Hockens</ul>
+  <ul>Ella </ul>
+  
 </body>
 </html>
