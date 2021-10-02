@@ -9,12 +9,14 @@
 <body>
   <h3> Members </h3>
   
-  <ul>Xing</ul>
+  <ul>Xing Lui </ul>
   <ul>Charles Pei</ul>
   <ul>Andrew Habata</ul>
   <ul>Jennifer Wong</ul>
   <ul>Faith Hockens</ul>
-  <ul>Ella </ul>
+  <ul>Ella Tang</ul>
+  <ul>Kevin Tan</ul>
+  <ul>John Bee</ul>
   
 </body>
 </html>
