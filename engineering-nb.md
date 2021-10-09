@@ -14,10 +14,9 @@
   <h1> About Us </h1>  
       <p>15303 Space Rocks is a fourth-year FTC team consisting of a group of high school students who are passionate about robots, science, technology, engineering, and mathematics. </p>
   
-   <h1> Mission </h>
+  <h1> Mission </h>
     
-    <p>To use science and technology to discover and 
-challenge ourselves. </p>
+    <p>To use science and technology to discover and challenge ourselves. </p>
     
     <h1>Vision</h1>
 
