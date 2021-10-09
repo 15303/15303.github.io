@@ -13,7 +13,7 @@
 <body>
   <h2> Team Space Rocks </h2>
   <h2> 15303 </h2>
-  <h2> Business Plan <h2>
+  <h2> Business Plan </h2>
     
   <h1> About Us </h1>  
       <p>15303 Space Rocks is a fourth-year FTC team consisting of a group of high school students who are passionate about robots, science, technology, engineering, and mathematics. </p>
