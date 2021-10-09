@@ -3,3 +3,4 @@ description: The website for ftc team 15303, Space Rocks
 show_downloads: true
 google_analytics:
 theme: minima
+show_downloads: false
