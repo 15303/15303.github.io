@@ -24,6 +24,14 @@
     <li> Kevin Tan </li>
     <li> John Bee </li>
     <li> Shin Umeda </li>
+  
+    <h2> Sponsors </h2>
+    
+    <h2> Past Robots </h2>
+    
+   
+     <a href="">Engineering Notebook</a>
+
     
       
   </ul>
