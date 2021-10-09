@@ -1,8 +1,7 @@
 <html>
 
   <head>
-  <h1> Space Rocks Team Information </h1>
-     
+  
   </head>
 
   
