@@ -30,7 +30,7 @@
     <h2> Past Robots </h2>
     
    
-     <a href="">Engineering Notebook</a>
+     <a href="https://15303.github.io/engineering-nb">Engineering Notebook</a>
 
     
       
