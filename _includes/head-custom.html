@@ -6,4 +6,166 @@
 <!-- You can set your favicon here -->
 <!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
 
+  <body>
+    <div id='up' onclick='window.scrollTo({top:0,behavior:`smooth`})'></div>
+    <div id='content-wrapper'>
+      <svg aria-hidden='true' id='logo-wrapper' viewBox='0 100 1800 1900' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='#fff' aria-label='15303 Space Rocks'>
+        <g id='wire' ondblclick='window.open(`/kessler`)' onmouseover='wire.speed=10,down.speed=.5' onmouseout='wire.speed=1,down.speed=1'>
+          <path id='wirex' d='
+          M900 500l500 500l-500 500l-500 -500z
+          '/>
+          <path id='wire0' d='
+          M900 500l500 500l-500 500l-500 -500z
+          '/>
+          <path id='wire1' d='
+          M400 1000l600 -100l400 100l-600 100z
+          '/>
+          <path id='wire2' d='
+          M900 500l100 400l-100 600l-100 -400z
+          '/>
+        </g>
+        <path id='logo' d='
+    M682.5 667.5l-150 -150v50v-50z
+    M707.5 642.5l100 -100l-50 -100l-125 125l-75 -75l150 -150
+    M832.5 517.5l50 -50v-150l-100 100l100 -100v-150l-150 150
+    M917.5 467.5l82.5 82.5l100 -200l-182.5 -182.5z
+    M1025 575l100 100l75 -75l-125 -125l125 125l75 -75l-150 -150
+    
+    M450 1100l-75 -75l-75 75l75 75l-75 75l-75 -75
+    M475 1125l-150 150l150 -150l75 75l-75 75l-75 -75
+    M632.5 1267.5h-100l-107.5 107.5l77.5 -75l100 100l-75 75l107.5 -107.5v-100
+    M775 1425l-75 -75l-150 150l75 75
+    M875 1525l-75 -75l-75 75l50 50l-50 -50l-75 75l75 75
+    
+    M925 1525l150 150l-150 -150l75 -75l75 75l-75 75h150
+    M1125 1325l-100 100l150 150l100 -100z
+    M1225 1225l-75 75l150 150l75 -75
+    M1250 1200l150 150l-75 -75h150h-150v-150
+    M1425 1025l-75 75l75 75l75 -75l75 75l-75 75
+        '/>
+        <g id='down' href='#about' onmouseover='down.speed=5,wire.speed=.5' onmouseout='down.speed=1,wire.speed=1'>
+          <path id='down0' d='
+          M800 1700L900 1750L1000 1700
+          '/>
+          <path id='down1' d='
+          M800 1700L900 1800L1000 1700
+          '/>
+          <path id='down2' d='
+          M800 1700L900 1850L1000 1700
+          '/>
+        </g>
+      </svg>
+    </div>
+    <script>
+const doc = document,
+      ref = doc.referrer,
+      contentWrapper = doc.getElementById('content-wrapper'),
+      logoWrapper = doc.getElementById('logo-wrapper'),
+      wire = [doc.getElementById('wire0'),doc.getElementById('wire1'),doc.getElementById('wire2')],
+      down = [doc.getElementById('down0'),doc.getElementById('down1'),doc.getElementById('down2')],
+      bulletWrapper = doc.getElementById('bullet-wrapper'),
+      cursor = doc.getElementById('cursor'),
+      flame = doc.getElementById('flame'),
+      asteroids = doc.getElementById('asteroids');
+splashAnim();
+
+doc.querySelectorAll(`*[href^='#']`).forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.blur();
+    doc.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+    window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
+  });
+});
+
+doc.onscroll = function(){
+  if(window.scrollY<50){
+    window.history.pushState({},'Space Rocks | FTC 15303',' ');
+  }
+  doc.querySelectorAll(`a[href^='#']`).forEach(anchor => {
+    if(Math.abs(anchor.getBoundingClientRect().top)<50){
+      window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
+    }
+  });
+};
+
+let time = new Date();
+time = time.getHours();
+if(time>=6&&time<18){
+  doc.body.classList.add('day');
+}
+wire.tick = 0;
+wire.time = Date.now();
+wire.speed = 1;
+
+down.tick = 0;
+down.time = wire.time;
+down.speed = 1;
+        
+function splashAnim(){
+  wire.tick += (Date.now() - wire.time)/8000*wire.speed;
+  wire.time = Date.now();
+  wire.center = [900,1000];
+
+  down.tick += (Date.now() - down.time)/1000*down.speed;
+  down.time = Date.now();
+  down.center = [900,1800];
+  wire.deviY = Math.sin(wire.tick/4-50)*100;
+  wire[0].setAttribute('d',
+  'M900 550'+
+  'L'+(Math.cos(wire.tick)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
+  'L900 1450'+
+  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  wire[1].setAttribute('d',
+  'M'+(Math.cos(wire.tick)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
+  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  wire[2].setAttribute('d',
+  'M900 550'+
+  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
+  'L900 1450'+
+  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
+  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
+  'z'
+  );
+  down[0].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick)*10+down.center[0])+
+  ' '+(Math.sin(down.tick)*50+down.center[1])+
+  'L1050 1700'
+  );
+  down[1].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick+2*Math.PI/3)*10+down.center[0])+
+  ' '+(Math.sin(down.tick+2*Math.PI/3)*50+down.center[1])+
+  'L1050 1700'
+  );
+  down[2].setAttribute('d',
+  'M750 1700'+
+  'L'+(Math.cos(down.tick+4*Math.PI/3)*10+down.center[0])+
+  ' '+(Math.sin(down.tick+4*Math.PI/3)*50+down.center[1])+
+  'L1050 1700'
+  );
+  window.requestAnimationFrame(splashAnim);
+}
+    </script>
+  </body>
+
+
+
+
 <!-- end custom head snippets -->
