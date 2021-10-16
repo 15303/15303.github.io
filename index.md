@@ -1,5 +1,11 @@
 ---
 ---
+<style>
+.members{
+  white-space: pre;
+  }  
+</style>
+
   <h2> Team Space Rocks 
    15303 
   <h2> Business Plan </h2>
@@ -43,6 +49,7 @@
     <h2>Location</h2>
 <p>Arcadia, CA</p>
     <h2>Members</h2>
+<div class="Members">  
 <p> 
 <pre> 
 - Simon Pei			  Coach
@@ -67,7 +74,8 @@
 <br>
 </pre>  
   </p>
-    
+
+</div class="Members">    
   
   <h2>Budget</h2>
 <p>As of now, the team is fully funded with member 
