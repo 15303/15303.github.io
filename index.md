@@ -44,27 +44,28 @@
 <p>Arcadia, CA</p>
     <h2>Members</h2>
 <p> 
-Simon Pei			  Coach
+<pre> 
+- Simon Pei			  Coach
 <br>
-Charles Pei		Capt./Assist. Coach
+- Charles Pei		          Capt./Assist. Coach
 <br>
-Kevin Tan			
+- Kevin Tan			
 <br>
-Xing Liu
+- Xing Liu
 <br>
-Jennifer Wong	
+- Jennifer Wong	
 <br>
-Andrew Habata		
+- Andrew Habata		
 <br>
-Faith Hockens
+- Faith Hockens
 <br>
-Ella Tang
+- Ella Tang
 <br>
-Shin Umeda
+- Shin Umeda
 <br>
-John Bee
+- John Bee
 <br>
-  
+</pre>  
   </p>
     
   
