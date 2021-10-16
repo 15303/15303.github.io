@@ -1,11 +1,12 @@
 ---
 ---
+<!--
 <style>
 .Members{
   white-space: pre;
   }  
 </style>
-
+-->
   <h1> Team Space Rocks 15303 </h1>
   
   <h1> About Us </h1>  
