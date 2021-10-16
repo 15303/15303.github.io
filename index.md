@@ -1,8 +1,4 @@
-<style>
-.basic{
-  white-space: pre;
-}
-</style>
+
 
 <h1>Team Space Rocks 15303</h1>
 
@@ -43,7 +39,7 @@
 
 <h1>Basic Information</h1>
 
-<div class="basic">
+
 <h3>
   Name:       15303 Space Rocks 
 
@@ -70,7 +66,7 @@
   - Shin Umeda
 
 </h3>  
-</div>
+
 
 <h2>Budget</h2>
     <p>
