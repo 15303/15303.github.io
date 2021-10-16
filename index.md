@@ -1,7 +1,7 @@
 ---
 ---
 <style>
-.members{
+.Members{
   white-space: normal;
   }  
 </style>
@@ -73,7 +73,7 @@
 <br>
   </p>
 
-</div class="members">    
+</div class="Members">    
   
   <h2>Budget</h2>
 <p>As of now, the team is fully funded with member 
