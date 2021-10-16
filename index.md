@@ -63,6 +63,7 @@ and stores.
     
  <h2> Competitons </h2>
  <h3> 2018 - 2019 </h3>
+  <img src= "2019-2020-1.png" >
  <p> Our robot competed in all of the League meets, allowing the team to gain lots of experience, make numerous modifications, and develop better strategies. Since the initial design, we’ve made many changes to the robot. In the end, the improvements helped Team Rocks to rank 4th overall. </p>
  <h3>2019-2020</h3>
 <p>
@@ -80,6 +81,8 @@ On November 13, 2019, several team members, along with coach Simon, once again p
 </p>
 
 <h2> Improvements </h2>
+  <img src= "improve-1.png" >
+  <img src= "improve-2.png" >
 <p>The team was officially created at the FTC 2019 kickoff event in Moreno Valley High School on September 8, 2018. We quickly learned how to work with REV parts and made initial designs. The team also changed in size as some members joined while other members left. Later, the team was able to advance more as we entered into our second year. With the new-gained knowledge and one year of experience, we were able to do better than the previous year and experiment with two robots. </p>
 
 <h2> Future Plans </h2>
