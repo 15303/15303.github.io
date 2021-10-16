@@ -57,7 +57,7 @@ planning on asking for fundings from nearby shops
 and stores.
 </p>
     <h1>History</h1>
-
+<img src="history-1.png" > 
 
 <p>Team Space Rocks was started by coach Simon Pei in September of 2018, along with his two children and three other members. From 2018-2020, team members met at coach Simon’s house weekly to design and build the robot. Each member was assigned specific roles and held important roles in the team. </p>
     
