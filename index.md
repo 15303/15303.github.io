@@ -51,7 +51,6 @@
     <h2>Members</h2>
 <div class="Members">  
 <p> 
-<pre> 
 - Simon Pei			  Coach
 <br>
 - Charles Pei		          Capt./Assist. Coach
@@ -72,10 +71,9 @@
 <br>
 - John Bee
 <br>
-</pre>  
   </p>
 
-</div class="Members">    
+</div class="members">    
   
   <h2>Budget</h2>
 <p>As of now, the team is fully funded with member 
