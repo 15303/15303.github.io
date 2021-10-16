@@ -56,7 +56,7 @@
           <p>Arcadia, CA</p>
   <h2>Members</h2>
 
-
+<!--
 <div class="Members">  
 - Simon Pei			  Coach
 
@@ -78,7 +78,8 @@
 
 - John Bee
 </div>    
-  
+-->
+
  <h2>Budget</h2>
     <p>
     As of now, the team is fully funded with member 
