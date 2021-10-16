@@ -2,7 +2,7 @@
 ---
 <style>
 .members{
-  white-space: pre;
+  white-space: normal;
   }  
 </style>
 
