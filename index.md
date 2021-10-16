@@ -27,8 +27,11 @@
 
             <p>
               Discovery
+              <br>
               Innovation
+              <br>
               Teamwork
+              <br>
               Enjoyment
 
               </p>
@@ -40,16 +43,32 @@
     <h2>Location</h2>
 <p>Arcadia, CA</p>
     <h2>Members</h2>
-<p> Simon Pei			  Coach
+<p> 
+Simon Pei			  Coach
+<br>
 Charles Pei		Capt./Assist. Coach
-Shawn Liu			Cocapt./Assist. Coach
+<br>
 Kevin Tan			
-John Bee			
-Chuanchun Tang		
+<br>
+Xing Liu
+<br>
+Jennifer Wong	
+<br>
 Andrew Habata		
-Richard Wei		
-Jennifer Wong 		</p>
-    <h2>Budget</h2>
+<br>
+Faith Hockens
+<br>
+Ella Tang
+<br>
+Shin Umeda
+<br>
+John Bee
+<br>
+  
+  </p>
+    
+  
+  <h2>Budget</h2>
 <p>As of now, the team is fully funded with member 
 Contributions. We are currently reaching out for
 more fundings for the current term. We are also
