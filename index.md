@@ -6,30 +6,29 @@
   }  
 </style>
 
-  <h2> Team Space Rocks 
-   15303 
-  <h2> Business Plan </h2>
-
-  <h1> About Us </h1>  
- 
+  <h1> Team Space Rocks 15303 </h1>
   
-              <p>15303 Space Rocks is a fourth-year FTC team consisting of a group of high school students who are passionate about robots, science, technology, engineering, and mathematics. </p>
+  <h1> About Us </h1>  
+  
+               <p>15303 Space Rocks is a fourth-year FTC team consisting of a group of high school students who are passionate about robots, science, technology,       
+               engineering, and mathematics. </p>
 
-              <h2> Mission </h2>
+  <h2> Mission </h2>
 
-                <p>To use science and technology to discover and challenge ourselves. </p>
+               <p>To use science and technology to discover and challenge ourselves. </p>
 
-                <h2>Vision</h2>
+  <h2>Vision</h2>
 
-            <p>We are trying to help younger generations to acquire knowledge and develop skills in the STEM field along with communication, collaboration, and   leadership skills through designing, implementing and advancing.</p>
+               <p>We are trying to help younger generations to acquire knowledge and develop skills in the STEM field along with communication, collaboration, and     
+               leadership skills through designing, implementing and advancing.</p>
 
-                <h2>Strategy</h2>
+  <h2>Strategy</h2>
 
             <p>We want to discover and learn through hands-on 
-            engineering activities. Have everyone contribute to team success by assigning specific leader roles. Execute with discipline. Make rapid development and      quick iterations. Be respectful, maintain gracious professionalism, and help each other. Last but not least, have fun!
+            engineering activities. Have everyone contribute to team success by assigning specific leader roles. Execute with discipline. Make rapid development and                 quick iterations. Be respectful, maintain gracious professionalism, and help each other. Last but not least, have fun!
             </p>
 
-                <h2>Values</h2>
+  <h2>Values</h2>
 
             <p>
               Discovery
@@ -40,16 +39,19 @@
               <br>
               Enjoyment
 
-              </p>
-    <h1> Basic Information </h1>
+            </p>
+  
+  <h1> Basic Information </h1>
     
     
-    <h2>Name</h2>
-<p>15303 Space Rocks</p>
-    <h2>Location</h2>
-<p>Arcadia, CA</p>
-    <h2>Members</h2>
-<div class="Members">  
+  <h2>Name</h2>
+          <p>15303 Space Rocks</p>
+  <h2>Location</h2>
+          <p>Arcadia, CA</p>
+  <h2>Members</h2>
+
+
+   <div class="Members">  
 - Simon Pei			  Coach
 
 - Charles Pei		          Capt./Assist. Coach
@@ -70,17 +72,18 @@
 
 - John Bee
 
-
-</div>    
+  </div>    
   
-  <h2>Budget</h2>
-<p>As of now, the team is fully funded with member 
-Contributions. We are currently reaching out for
-more fundings for the current term. We are also
-planning on asking for fundings from nearby shops
-and stores.
-</p>
-    <h1>History</h1>
+ <h2>Budget</h2>
+     <p>As of now, the team is fully funded with member 
+    Contributions. We are currently reaching out for
+    more fundings for the current term. We are also
+    planning on asking for fundings from nearby shops
+    and stores.
+    </p>
+
+<h1>History</h1>
+
 <img src="history-1.png" > 
 
 <p>Team Space Rocks was started by coach Simon Pei in September of 2018, along with his two children and three other members. From 2018-2020, team members met at coach Simon’s house weekly to design and build the robot. Each member was assigned specific roles and held important roles in the team. </p>
