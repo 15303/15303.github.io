@@ -84,7 +84,7 @@
 <h2>Competitions</h2>
 
 <h3>2018-2019</h3>
-<img src= "2019-2020-1.png" >
+<img src= "2018-2019-1.png" >
   <p> 
     Our robot competed in all of the League meets, allowing the team to gain lots of experience, make numerous modifications, and develop better strategies. Since the        initial design, we’ve made many changes to the robot. In the end, the improvements helped Team Rocks to rank 4th overall. 
   </p>
