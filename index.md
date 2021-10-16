@@ -51,7 +51,7 @@
   <h2>Members</h2>
 
 
-   <div class="Members">  
+<div class="Members">  
 - Simon Pei			  Coach
 
 - Charles Pei		          Capt./Assist. Coach
@@ -71,8 +71,7 @@
 - Shin Umeda
 
 - John Bee
-
-  </div>    
+</div>    
   
  <h2>Budget</h2>
      <p>As of now, the team is fully funded with member 
