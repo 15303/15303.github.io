@@ -2,7 +2,7 @@
 ---
 <style>
 .Members{
-  white-space: normal;
+  white-space: pre;
   }  
 </style>
 
@@ -50,28 +50,26 @@
 <p>Arcadia, CA</p>
     <h2>Members</h2>
 <div class="Members">  
-<p> 
 - Simon Pei			  Coach
-<br>
+
 - Charles Pei		          Capt./Assist. Coach
-<br>
+
 - Kevin Tan			
-<br>
+
 - Xing Liu
-<br>
+
 - Jennifer Wong	
-<br>
+
 - Andrew Habata		
-<br>
+
 - Faith Hockens
-<br>
+
 - Ella Tang
-<br>
+
 - Shin Umeda
-<br>
+
 - John Bee
-<br>
-  </p>
+
 
 </div class="Members">    
   
