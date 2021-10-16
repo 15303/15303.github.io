@@ -71,7 +71,7 @@
 - John Bee
 
 
-</div class="Members">    
+</div>    
   
   <h2>Budget</h2>
 <p>As of now, the team is fully funded with member 
