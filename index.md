@@ -1,5 +1,5 @@
-
-
+---
+---
 <h1>Team Space Rocks 15303</h1>
 
 <h1>About Us</h1>
@@ -40,60 +40,48 @@
 <h1>Basic Information</h1>
 
 
-<h3>
-  Name:       15303 Space Rocks 
 
-  Location:   Arcadia, CA
+## Name: 15303 Space Rocks 
 
-  Members: 
+### Location: Arcadia, CA
 
-  - Simon Pei			  Coach
+### Members: 
 
-  - Charles Pei		          Capt./Assist. Coach
+  - Simon Pei: Coach
+  - Charles Pei: Capt./Assist. Coach
+  - Kevin Tan
+  - Xing Liu  
+  - Jennifer Wong  
+  - Andrew Habata  
+  - Faith Hockens  
+  - Ella Tang  
+  - Shin Umeda  
 
-  - Kevin Tan			
-
-  - Xing Liu
-
-  - Jennifer Wong	
-
-  - Andrew Habata		
-
-  - Faith Hockens
-
-  - Ella Tang
-
-  - Shin Umeda
-
-</h3>  
 
 
 <h2>Budget</h2>
-    <p>
-    As of now, the team is fully funded with member 
-    Contributions. We are currently reaching out for
-    more fundings for the current term. We are also
-    planning on asking for fundings from nearby shops
-    and stores.
-    </p>
-
+ 
+As of now, the team is fully funded with member
+Contributions. We are currently reaching out for
+more funding for the current term. We are also
+planning on asking for funding from nearby shops
+and stores.
 
 <h1>History</h1>
-<img src="history-1.png" > 
+<img src="\assets\images\history-1.png" > 
 
 <h2>Competitions</h2>
 
 <h3>2018-2019</h3>
-<img src= "2018-2019-1.png" >
+<img src= "\assets\images\2018-2019-1.png" >
   <p> 
     Our robot competed in all of the League meets, allowing the team to gain lots of experience, make numerous modifications, and develop better strategies. Since the        initial design, we’ve made many changes to the robot. In the end, the improvements helped Team Rocks to rank 4th overall. 
   </p>
 
 <h3>2019-2020</h3>
-     <p>
-      Our robot continued to compete 
-      in all of the League meets, using past knowledge along with newly gained information to develop better strategies. Many changes were done to the robot after the         initial design was established. With these new improvements, Team Space Rocks was able to frequently get top 5’s in competitions. Moreover, as only a second-year         robotics team, we were able to win the LA Interleague tournament as the first alliance’s first pick.
-      </p>
+   
+Our robot continued to compete 
+in all of the League meets, using past knowledge along with newly gained information to develop better strategies. Many changes were done to the robot after the         initial design was established. With these new improvements, Team Space Rocks was able to frequently get top 5’s in competitions. Moreover, as only a second-year         robotics team, we were able to win the LA Interleague tournament as the first alliance’s first pick.
 
 <h1>Community Outreach</h1>
 
@@ -109,8 +97,8 @@
   </p>
 
 <h2>Improvements</h2>
-<img src= "improve-1.png" >
-<img src= "improve-2.png" >
+<img src= "\assets\images\improve-1.png" >
+<img src= "\assets\images\improve-2.png" >
 
   <p>
     The team was officially created at the FTC 2019 kickoff event in Moreno Valley High School on September 8, 2018. We quickly learned how to work with REV parts and made initial designs. The team also changed in size as some members joined while other members left. Later, the team was able to advance more as we entered into our second year. With the new-gained knowledge and one year of experience, we were able to do better than the previous year and experiment with two robots. 
