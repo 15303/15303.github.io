@@ -7,22 +7,15 @@
 <!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
 
   <body>
-    <div id='up' onclick='window.scrollTo({top:0,behavior:`smooth`})'></div>
-    <div id='content-wrapper'>
-      <svg aria-hidden='true' id='logo-wrapper' viewBox='0 100 1800 1900' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='#fff' aria-label='15303 Space Rocks'>
-        <g id='wire' ondblclick='window.open(`/kessler`)' onmouseover='wire.speed=10,down.speed=.5' onmouseout='wire.speed=1,down.speed=1'>
-          <path id='wirex' d='
-          M900 500l500 500l-500 500l-500 -500z
-          '/>
-          <path id='wire0' d='
-          M900 500l500 500l-500 500l-500 -500z
-          '/>
-          <path id='wire1' d='
-          M400 1000l600 -100l400 100l-600 100z
-          '/>
-          <path id='wire2' d='
-          M900 500l100 400l-100 600l-100 -400z
-          '/>
+    <svg id='logo-wrapper' viewBox='0 100 1800 1900' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='#000' stroke-width='4'>
+      <title>Logo of 15303 Space Rocks</title>
+        <path id='wirex' d='
+        M900 500l500 500l-500 500l-500 -500z
+        '/>
+        <g id='wire' transform='translate(900 1000)'>
+          <path d='M   0 -500l500 500l-500 500l-500 -500z'/>
+          <path d='M-100    0l600 -100l400 100l-600 100z'/>
+          <path d='M   0 -500l100 400l-100 600l-100 -400'/>
         </g>
         <path id='logo' d='
     M682.5 667.5l-150 -150v50v-50z
@@ -43,124 +36,73 @@
     M1250 1200l150 150l-75 -75h150h-150v-150
     M1425 1025l-75 75l75 75l75 -75l75 75l-75 75
         '/>
-        <g id='down' href='#about' onmouseover='down.speed=5,wire.speed=.5' onmouseout='down.speed=1,wire.speed=1'>
-          <path id='down0' d='
-          M800 1700L900 1750L1000 1700
-          '/>
-          <path id='down1' d='
-          M800 1700L900 1800L1000 1700
-          '/>
-          <path id='down2' d='
-          M800 1700L900 1850L1000 1700
-          '/>
+        <g id='down' transform='translate(900 1800)'>
+          <path d='M-100 -100L0 -50L100 -100'/>
+          <path d='M-100 -100L0   0L100 -100'/>
+          <path d='M-100 -100L0  50L100 -100'/>
         </g>
       </svg>
-    </div>
     <script>
 const doc = document,
       ref = doc.referrer,
       contentWrapper = doc.getElementById('content-wrapper'),
       logoWrapper = doc.getElementById('logo-wrapper'),
-      wire = [doc.getElementById('wire0'),doc.getElementById('wire1'),doc.getElementById('wire2')],
-      down = [doc.getElementById('down0'),doc.getElementById('down1'),doc.getElementById('down2')],
-      bulletWrapper = doc.getElementById('bullet-wrapper'),
-      cursor = doc.getElementById('cursor'),
-      flame = doc.getElementById('flame'),
-      asteroids = doc.getElementById('asteroids');
-splashAnim();
+      down = [doc.getElementById('down0'),doc.getElementById('down1'),doc.getElementById('down2')]
 
-doc.querySelectorAll(`*[href^='#']`).forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    this.blur();
-    doc.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-    window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
-  });
-});
+draw()
 
-doc.onscroll = function(){
-  if(window.scrollY<50){
-    window.history.pushState({},'Space Rocks | FTC 15303',' ');
-  }
-  doc.querySelectorAll(`a[href^='#']`).forEach(anchor => {
-    if(Math.abs(anchor.getBoundingClientRect().top)<50){
-      window.history.pushState({},'Space Rocks | FTC 15303',anchor.getAttribute('href'));
-    }
-  });
-};
-
-let time = new Date();
-time = time.getHours();
-if(time>=6&&time<18){
-  doc.body.classList.add('day');
-}
-wire.tick = 0;
-wire.time = Date.now();
-wire.speed = 1;
-
-down.tick = 0;
-down.time = wire.time;
-down.speed = 1;
         
-function splashAnim(){
-  wire.tick += (Date.now() - wire.time)/8000*wire.speed;
-  wire.time = Date.now();
-  wire.center = [900,1000];
+function draw(){
+  const t = performance.now()/1000
+  const pi = Math.PI
+  const sin = Math.sin(t)
+  const sin1 = Math.sin(t+pi*2/3)
+  const sin2 = Math.sin(t+pi*4/3)
+  const cos = Math.cos(t)
+  const cos1 = Math.cos(t+pi*2/3)
+  const cos2 = Math.cos(t+pi*4/3)
 
-  down.tick += (Date.now() - down.time)/1000*down.speed;
-  down.time = Date.now();
-  down.center = [900,1800];
-  wire.deviY = Math.sin(wire.tick/4-50)*100;
-  wire[0].setAttribute('d',
-  'M900 550'+
-  'L'+(Math.cos(wire.tick)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
-  'L900 1450'+
-  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
-  'z'
-  );
-  wire[1].setAttribute('d',
-  'M'+(Math.cos(wire.tick)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick)*wire.deviY+wire.center[1])+
-  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
-  'L'+(Math.cos(wire.tick+Math.PI)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI)*wire.deviY+wire.center[1])+
-  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
-  'z'
-  );
-  wire[2].setAttribute('d',
-  'M900 550'+
-  'L'+(Math.cos(wire.tick+Math.PI/2)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI/2)*wire.deviY+wire.center[1])+
-  'L900 1450'+
-  'L'+(Math.cos(wire.tick+Math.PI*1.5)*450+wire.center[0])+
-  ' '+(Math.sin(wire.tick+Math.PI*1.5)*wire.deviY+wire.center[1])+
-  'z'
-  );
-  down[0].setAttribute('d',
-  'M750 1700'+
-  'L'+(Math.cos(down.tick)*10+down.center[0])+
-  ' '+(Math.sin(down.tick)*50+down.center[1])+
-  'L1050 1700'
-  );
-  down[1].setAttribute('d',
-  'M750 1700'+
-  'L'+(Math.cos(down.tick+2*Math.PI/3)*10+down.center[0])+
-  ' '+(Math.sin(down.tick+2*Math.PI/3)*50+down.center[1])+
-  'L1050 1700'
-  );
-  down[2].setAttribute('d',
-  'M750 1700'+
-  'L'+(Math.cos(down.tick+4*Math.PI/3)*10+down.center[0])+
-  ' '+(Math.sin(down.tick+4*Math.PI/3)*50+down.center[1])+
-  'L1050 1700'
-  );
-  window.requestAnimationFrame(splashAnim);
+const path = a => 'M' + a.join('L') + 'z'
+  
+  const x = 900
+  const z = 1800
+  const dy = Math.sin(t/4)*100
+  
+  const wt = '0 -450'
+  const w = [
+    [cos, sin],
+    [-sin, cos],
+    [-cos, -sin],
+    [sin, -cos]
+  ].map(([a,b])=>a*900/2+' '+b*dy)
+  const wb = '0 450'
+  
+  const wires = [
+    [wt, w[0], wb, w[2]],
+    w,
+    [wt, w[1], wb, w[3]],
+  ]
+  
+  const dt = '-150 -100'
+  const d = [
+    [cos, sin],
+    [cos1, sin1],
+    [cos2, sin2],
+  ].map(([a,b])=>a*10+' '+b*50)
+  const db = '150 -100'
+  const downs = [
+    [dt, d[0], db],
+    [dt, d[1], db],
+    [dt, d[2], db],
+  ]
+  
+  Array.from(document.getElementById('wire').children)
+  .forEach((wire,index)=>wire.setAttribute('d',path(wires[index])))
+
+  Array.from(document.getElementById('down').children)
+    .forEach((down,index)=>down.setAttribute('d',path(downs[index])))
+ 
+  requestAnimationFrame(draw)
 }
     </script>
   </body>
