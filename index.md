@@ -6,10 +6,12 @@
   color: black;
   
   }
-  </style>
+</style>
+
 <h1>Team Space Rocks 15303</h1>
 
 <body>
+  
 <div class="links">  
 <a href="https://15303.github.io/about">About Us</a>
   <br>
