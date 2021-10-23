@@ -1,8 +1,14 @@
 ---
 ---
+
 # Team Space Rocks 15303
 
+<<<<<<< HEAD
 <div class="links">  
+=======
+<body>
+  
+>>>>>>> af4e1b458054d9fb23b5fe1fb06242ee0703cbcf
 <a href="https://15303.github.io/about">About Us</a>
   <br>
 <a href="https://15303.github.io/basic-info">Basic Info</a>
@@ -13,5 +19,9 @@
   <a href="https://15303.github.io/community">Community</a>
 <br>
   
+<<<<<<< HEAD
   </div>
   
+=======
+</body>
+>>>>>>> af4e1b458054d9fb23b5fe1fb06242ee0703cbcf
