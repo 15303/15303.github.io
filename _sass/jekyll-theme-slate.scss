@@ -50,6 +50,7 @@ body {
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  
   -webkit-font-smoothing: antialiased;
 }
 
@@ -485,4 +486,12 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+/* Custom stuff for xing's animation */
+#logo-wrapper{
+width: 256px;
+margin: auto;
+}
+header{
+display: flex;
 }
